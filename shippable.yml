@@ -1,0 +1,12 @@
+nguage: python
+python:
+    - 2.7
+script:
+    - echo "sample_clojure"
+    - curl -XPOST https://apibeta.shippable.com/projects/53bf872355a71a2200f1a79b/build?token=$SHIPPABLE_API_TOKEN
+    - echo "mongodb"
+    - curl -XPOST https://apibeta.shippable.com/projects/53bf872455a71a2200f1a79d/build?token=$SHIPPABLE_API_TOKEN
+    - echo "postgres"
+    - curl -XPOST https://apibeta.shippable.com/projects/53bf872555a71a2200f1a79f/build?token=$SHIPPABLE_API_TOKEN
+
+
