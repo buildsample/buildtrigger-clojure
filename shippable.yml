@@ -1,4 +1,5 @@
 language: python
+
 python:
     - 2.7
 env:
@@ -13,7 +14,8 @@ python:
 # - curl -H "Authorization: apiToken $apiToken" \-H "Content-Type: application/json" \-d "{\"projectId\": \"011d01\"}"https://api.shippable.com/workflow/enableRepoBuild
 install: true
 
-script: true
+script: 
+ - sleep 7000
 
 after_success:
 - 'curl -H "Authorization: apiToken $apiToken" -H "Content-Type: application/json" -d "{\"projectId\": \"$projectID\"}" https://apibeta.shippable.com/workflow/triggerBuild'
